@@ -1,8 +1,7 @@
 import os
 from collections import deque
-from collections.abc import Set
+from collections.abc import Generator, Iterable, Set
 from pathlib import Path
-from typing import Generator, Iterable
 
 
 def list_files(path: Path) -> Generator[Path, None, None]:
@@ -23,7 +22,7 @@ def filter_files(
         files: Iterable[Path],
         extensions: Set[str],
         case_insensitive: bool = False,
-):
+) -> Iterable[Path]:
     exts = extensions
     if case_insensitive:
         exts = frozenset(map(str.lower, extensions))

@@ -1,0 +1,24 @@
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+select = [
+  "BLE",
+  "C90",
+  "E",
+  "F",
+  "G",
+  "I",
+  "ICN",
+  "ISC",
+  "PLE",
+  "Q",
+  "RUF006",
+  "RUF100",
+  "T10",
+  "T20",
+  "TID",
+  "UP",
+  "W",
+]
+ignore = ["E712", "UP007"]
+flake8-quotes = { inline-quotes = "double", multiline-quotes = "double" }

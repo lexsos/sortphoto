@@ -14,3 +14,9 @@ develop: clean
 	env/bin/pip install -U pip wheel
 	env/bin/pip install -Ue '.[develop]'
 	env/bin/pip check
+
+lint:
+	env/bin/ruff sortphoto tests
+
+format:
+	env/bin/ruff --fix sortphoto tests
