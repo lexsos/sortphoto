@@ -10,5 +10,6 @@ def params():
     group.add_argument("--src", type=Path, required=True)
     group.add_argument("--dst", type=Path, required=True)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--rm-src", action="store_true")
 
     return parser.parse_args()

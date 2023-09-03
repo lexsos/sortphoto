@@ -12,8 +12,7 @@ _EXPRESSIONS = tuple(re.compile(pattern) for pattern in _PATTERNS)
 
 def pars_date(raw_data: str) -> Optional[date]:
     for expr in _EXPRESSIONS:
-        s = expr.search(raw_data)
-        if not s:
+        if not (s := expr.search(raw_data)):
             continue
         try:
             return date(**{k: int(v) for k, v in s.groupdict().items()})
