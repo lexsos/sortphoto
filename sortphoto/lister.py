@@ -19,9 +19,9 @@ def list_files(path: Path) -> Generator[Path, None, None]:
 
 
 def filter_files(
-        files: Iterable[Path],
-        extensions: Set[str],
-        case_insensitive: bool = False,
+    files: Iterable[Path],
+    extensions: Set[str],
+    case_insensitive: bool = False,
 ) -> Iterable[Path]:
     exts = extensions
     if case_insensitive:
